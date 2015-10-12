@@ -19,7 +19,7 @@
   },
   nodes: [
     {
-      name: 'adwordslayer',
+      name: 'node1',
       public_ip: @public_ips.pop,
       private_ip: @private_ips.pop,
       ports: [
@@ -28,7 +28,7 @@
       ]
     },
     {
-      name: 'callcenterlayer',
+      name: 'node2',
       public_ip: @public_ips.pop,
       private_ip: @private_ips.pop,
       ports: [
@@ -37,7 +37,7 @@
       ]
     },
     {
-      name: 'algorithme',
+      name: 'node3',
       public_ip: @public_ips.pop,
       private_ip: @private_ips.pop,
       ports: [
