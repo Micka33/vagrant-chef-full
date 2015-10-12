@@ -201,14 +201,14 @@ def create_chefserver(machine_name, ports, private_ip, public_ip, config)
     dpkg -i chef-server-core_12.2.0-1_amd64.deb
     apt-get install -f
     mkdir /etc/chef-server/
-    echo "#{<<-F.gsub(/\n/, '\n')
-      server_name = \\"#{public_ip}\\"
+    echo "#{<<-F.gsub(/\n/, "\n")
+      server_name = '#{public_ip}'
       api_fqdn server_name
       bookshelf['vip'] = server_name
-      nginx['url'] = \\"https://\#{server_name}\\"
+      nginx['url'] = 'https://'+server_name+'/'
       nginx['server_name'] = server_name
-      nginx['ssl_certificate'] = \\"/var/opt/opscode/nginx/ca/\#{server_name}.crt\\"
-      nginx['ssl_certificate_key'] = \\"/var/opt/opscode/nginx/ca/\#{server_name}.key\\"
+      nginx['ssl_certificate'] = '/var/opt/opscode/nginx/ca/'+server_name+'.crt'
+      nginx['ssl_certificate_key'] = '/var/opt/opscode/nginx/ca/'+server_name+'.key'
       F
     }" > /etc/opscode/chef-server.rb
     chef-server-ctl reconfigure
