@@ -49,7 +49,7 @@ knife ssh 192.168.10.98 'sudo chef-client' --manual-list --ssh-user debian --ide
 knife ssh "name:adwordslayer" "sudo chef-client" -x debian --identity-file ../../../vagrant_keys/id_rsa --ssh-gateway 192.168.10.98
 ## some usefull commands
 berks install
-berks upload
+berks upload #--no-ssl-verify
 
 
 ```
