@@ -226,7 +226,7 @@ def create_chefserver(machine_name, ports, private_ip, public_ip, config)
     echo 'The admin account and organization have been created.'
   CHEFSERVER
   ready_message(machine_name, ports, private_ip, public_ip, config, <<-TEXT
-    Chef server now accessible at https://127.0.0.1:#{p.last.to_s}/
+    Chef server now accessible at https://127.0.0.1:#{ports.last.to_s}/
     Admin username => admin
     Admin password => admin
   TEXT
