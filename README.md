@@ -5,7 +5,7 @@ contains a chefserver, a chefworkstation, and 3 nodes
 `Vagrant up` will create  all the machines.  
 Once this is done you need to:
  - Download the Starter Kit
-    - From a web browser, navigate to your Chef server's hostname over HTTPS, for example, https://127.0.0.1:4433.
+    - From a web browser, navigate to your Chef server's hostname over HTTPS, https://127.0.0.1:4433.
     - Sign in using admin admin.
     - When prompted, enter the full name (for example, Web development team) and short name (for example, webdev) for your organization.
     - From the Administration tab, select your organization.
