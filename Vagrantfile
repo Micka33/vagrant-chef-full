@@ -7,8 +7,8 @@
     public_ip: @public_ips.pop,
     private_ip: @private_ips.pop,
     ports: [
-      [443, 4433],
-      [80, 8003]
+      [80, 8003],
+      [443, 4433]
     ]
   },
   chefworkstation: {
@@ -226,7 +226,7 @@ def create_chefserver(machine_name, ports, private_ip, public_ip, config)
     echo 'The admin account and organization have been created.'
   CHEFSERVER
   ready_message(machine_name, ports, private_ip, public_ip, config, <<-TEXT
-    Chef server now accessible at https://127.0.0.1:#{ports.last.to_s}/
+    Chef server now accessible at https://127.0.0.1:#{ports.last.last.to_s}/
     Admin username => admin
     Admin password => admin
   TEXT
