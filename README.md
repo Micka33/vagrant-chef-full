@@ -34,6 +34,18 @@ knife ssl check
 # Test the connection to Chef server
 knife client list
 
+
+## Some commands
+## Update a Cookbook
+knife cookbook upload hello_chef_server
+## Add a node and a recipe
+knife bootstrap 192.168.10.98 --ssh-user debian --sudo --identity-file ../vagrant_keys/id_rsa --node-name node1 --run-list 'recipe[hello_chef_server]'
+# sudo user password: 78yu[]OP
+## Update a node (by executing it's recipe)
+knife ssh 192.168.10.98 'sudo chef-client' --manual-list --ssh-user debian --identity-file ../vagrant_keys/id_rsa
+# sudo user password: 78yu[]OP
+
+
 ```
 
 # Upon success
