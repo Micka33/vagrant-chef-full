@@ -222,7 +222,7 @@ def create_chefserver(machine_name, ports, private_ip, public_ip, config)
     opscode-reporting-ctl reconfigure
     echo 'Creating the admin account .........'
     #chef-server-ctl user-create username name lastname email             password --filename ADMIN_USER_NAME.pem
-    chef-server-ctl  user-create admin    it   admin    admin@example.com admin    --filename admin.pem
+    chef-server-ctl  user-create admin    it   admin    admin@example.com password --filename admin.pem
     echo 'The admin account and organization have been created.'
   CHEFSERVER
   ready_message(machine_name, ports, private_ip, public_ip, config, <<-TEXT
