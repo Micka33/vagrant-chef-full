@@ -23,7 +23,7 @@ Once this is done you need to:
 vagrant ssh chefworkstation
 
 # Enter the chef-repo folder
-cd chef-repo
+cd sources/chef-repo
 
 # Download the Chef server's SSL certificate
 knife ssl fetch

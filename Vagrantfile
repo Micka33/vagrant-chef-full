@@ -135,7 +135,7 @@ def create_worksation(machine_name, ports, private_ip, public_ip, config)
     vb.customize ['modifyvm', :id, '--cpuexecutioncap', '20']
     vb.customize ['modifyvm', :id, '--natdnsproxy1', 'on']
   end
-  config.vm.synced_folder '.', '/vagrant',
+  config.vm.synced_folder '.', '/home/vagrant/sources',
                           owner: 'vagrant',
                           group: 'vagrant'#,
                           # type: 'rsync',
