@@ -44,6 +44,9 @@ knife bootstrap 192.168.10.98 --ssh-user debian --sudo --identity-file ../vagran
 ## Update a node (by executing it's recipe)
 knife ssh 192.168.10.98 'sudo chef-client' --manual-list --ssh-user debian --identity-file ../vagrant_keys/id_rsa
 # sudo user password: 78yu[]OP
+## Excuting a command on a specific node
+## Since there is no DNS hostname resolution we need to use --ssh-gateway with the node ip
+knife ssh "name:adwordslayer" "sudo chef-client" -x debian --identity-file ../../../vagrant_keys/id_rsa --ssh-gateway 192.168.10.98
 
 
 ```
