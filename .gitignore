@@ -1,0 +1,9 @@
+.DS_Store
+.vagrant
+chef-server-core*
+chef-repo/.chef
+chef-repo/cookbooks
+chef-repo/roles
+chef-repo/.gitignore
+chef-repo/README.md
+vagrant_keys/id*
