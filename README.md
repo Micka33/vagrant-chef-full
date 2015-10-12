@@ -1,5 +1,5 @@
 # vagrant-chef-full
-contains a chefserver (management console/reporting feature), a chefworkstation, and 3 nodes
+contains a chefserver (opscode-manage/opscode-reporting), a chefworkstation, and 3 nodes
 
 # what to do
 `Vagrant up` will create  all the machines.  
