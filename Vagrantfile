@@ -194,10 +194,10 @@ def create_chefserver(machine_name, ports, private_ip, public_ip, config)
   config.vm.provision "shell", inline:<<-CHEFSERVER
     apt-get update -y
     locale-gen UTF-8
+    apt-get install -y htop git curl emacs libfreetype6 libpng3 ntp sudo
     debconf-set-selections <<< "postfix postfix/mailname string cherfserver.com"
     debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
-    apt-get install -y htop git curl emacs postfix libfreetype6 libpng3 ntp sudo
-    # wget -nv https://web-dl.packagecloud.io/chef/stable/packages/ubuntu/trusty/chef-server-core_12.2.0-1_amd64.deb
+    apt-get install -y postfix
     dpkg -i chef-server-core_12.2.0-1_amd64.deb
     apt-get install -f
     mkdir /etc/chef-server/
