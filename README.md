@@ -13,7 +13,7 @@ Once this is done you need to:
     - Click the Download Starter Kit button.
     - Click Proceed. Save the file chef-starter.zip to your computer.
     - Extract chef-starter.zip to the chef-repo directory.
- - Now verify that the ~/chef-repo/.chef directory on your workstation contains knife configuration file and your RSA key.
+ - Now verify that the chef-repo/.chef directory on your workstation contains knife configuration file and your RSA key.
 
 
 ```
