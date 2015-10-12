@@ -33,3 +33,39 @@ knife ssl check
 knife client list
 
 ```
+
+# Upon success
+
+Upon success a message like this one should appear:
+
+```console
+==> chefserver: Machine 'chefserver' has a post `vagrant up` message. This is a message
+==> chefserver: from the creator of the Vagrantfile, and not from Vagrant itself:
+==> chefserver:
+==> chefserver: chefserver is now live...
+==> chefserver:     Public IP: 192.168.10.100
+==> chefserver:     Private IP: 192.168.10.254
+==> chefserver:     Machine ports : 443,80
+==> chefserver:     Host ports : 4433,8003
+==> chefserver:         Chef server now accessible at https://127.0.0.1:4433/
+==> chefserver:     Admin username => admin
+==> chefserver:     Admin password => password
+
+==> chefworkstation: Machine 'chefworkstation' has a post `vagrant up` message. This is a message
+==> chefworkstation: from the creator of the Vagrantfile, and not from Vagrant itself:
+==> chefworkstation:
+==> chefworkstation: chefworkstation is now live...
+==> chefworkstation:     Public IP: 192.168.10.99
+==> chefworkstation:     Private IP: 192.168.10.253
+==> chefworkstation:     Machine ports :
+==> chefworkstation:     Host ports :
+
+==> node1: Machine 'node1' has a post `vagrant up` message. This is a message
+==> node1: from the creator of the Vagrantfile, and not from Vagrant itself:
+==> node1:
+==> node1: node1 is now live...
+==> node1:     Public IP: 192.168.10.98
+==> node1:     Private IP: 192.168.10.252
+==> node1:     Machine ports : 80,443
+==> node1:     Host ports : 8002,4432
+```

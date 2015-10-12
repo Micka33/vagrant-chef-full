@@ -228,7 +228,7 @@ def create_chefserver(machine_name, ports, private_ip, public_ip, config)
   ready_message(machine_name, ports, private_ip, public_ip, config, <<-TEXT
     Chef server now accessible at https://127.0.0.1:#{ports.last.last.to_s}/
     Admin username => admin
-    Admin password => admin
+    Admin password => password
   TEXT
   )
 end
